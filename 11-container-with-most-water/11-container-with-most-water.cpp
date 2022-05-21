@@ -19,10 +19,10 @@ public:
             }
             else{
                 if(height[a+1]>height[b-1]){
-                    b--;
+                    a++;
                 }
                 else{
-                    a++;
+                    b--;
                 }
             }
         }
