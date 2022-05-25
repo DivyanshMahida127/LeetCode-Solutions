@@ -18,10 +18,6 @@ public:
                     if(check == 0){
                         vector<int> a({nums[i],nums[j],nums[k]});
                         hash[a]++;
-                        
-                        if(hash[a] == 1){
-                            answer.push_back(a);
-                        }
                         j++;
                         k--;
                     }
@@ -33,6 +29,10 @@ public:
                     }
                 }
             }
+        }
+        for(auto i:hash){
+            vector<int> a({i.first[0],i.first[1],i.first[2]});
+            answer.push_back(a);
         }
         return answer;
     }
