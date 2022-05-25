@@ -3,7 +3,7 @@ public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         int n = nums.size();
         vector<vector<int>> answer;
-        map<vector<int>,int> hash;
+        
         if(n <= 2){
             return answer;
         }
@@ -11,15 +11,27 @@ public:
             sort(nums.begin(),nums.end());
             int i,j,k;
             for(i=0;i<n-2;i++){
-                j = i+1;k = n-1;
+                if(i > 0 && (nums[i] == nums[i-1])){
+                    continue;
+                }
+                j = i+1;
+                k = n-1;
+                int x = nums[i];
                 while(j < k){
-                    int check = nums[i]+nums[j]+nums[k];
-                    // cout << check << " " << nums[i] << " " << nums[j] << " " << nums[k] << "\n";
+                    int check = x+nums[j]+nums[k];
                     if(check == 0){
                         vector<int> a({nums[i],nums[j],nums[k]});
-                        hash[a]++;
-                        j++;
-                        k--;
+                        answer.push_back(a);
+                        
+                        int r = j,s = k;
+                        j++,k--;
+                        while(j < n && nums[r] == nums[j]){
+                            j++;
+                        }
+                        
+                        while(k >= 0 && nums[k] == nums[s]){
+                            k--;
+                        }
                     }
                     else if(check < 0){
                         j++;
@@ -30,10 +42,7 @@ public:
                 }
             }
         }
-        for(auto i:hash){
-            vector<int> a({i.first[0],i.first[1],i.first[2]});
-            answer.push_back(a);
-        }
+        
         return answer;
     }
 };
