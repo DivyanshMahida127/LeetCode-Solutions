@@ -25,7 +25,6 @@ public:
                 if(result <= 0){
                     j=i;
                 }
-                // cout << i << " " << result << "\n";
             }
             
             if(answer <= 0){
@@ -35,6 +34,5 @@ public:
                 return answer;
             }
         }
-        // return answer;
     }
 };
