@@ -21,8 +21,6 @@ public:
                     y += cardPoints[n-1-i];
                 }
                 
-                // cout << x << " " << y << "\n";
-                
                 int z;
                 z = INT_MIN;
                 
@@ -32,9 +30,7 @@ public:
                     z = max(z,x);
                     i--;
                     j--;
-                    // cout << x << " " << z << "\n";
                 }
-                // cout << z << "\n";
                 
                 i = n-k,j=0;
                 while(i < n){
@@ -42,9 +38,7 @@ public:
                     z = max(z,y);
                     i++;
                     j++;
-                    // cout << y << " " << z << "\n";
                 }
-                // cout << z << "\n";
                 return z;
             }
         }
