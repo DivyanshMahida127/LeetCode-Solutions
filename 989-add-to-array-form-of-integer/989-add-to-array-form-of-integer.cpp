@@ -31,9 +31,6 @@ public:
                 }
             }
             else{
-//                 cout << m << " " << add << " ";
-                
-//                 cout << num.size() << "\n";
                 while(m > -1 && add != 0){
                     sum = num[m] + add;
                     if(sum <= 9){
@@ -47,10 +44,8 @@ public:
                     }
                     m--;
                 }
-                // cout << m << " " << add << " ";
-                // cout << num.size() << "\n";
                 
-                if(add != 0 && m == -1){
+                if(add != 0){
                     num.push_back(add);
                     for(int i=n;i>=1;i--){
                         swap(num[i],num[i-1]);
@@ -77,9 +72,6 @@ public:
             
             if(add != 0){
                 answer.push_back(add);
-                // for(int i=answer.size();i>=1;i--){
-                //     swap(num[i],num[i-1]);
-                // }
             }
             
             reverse(answer.begin(),answer.end());
