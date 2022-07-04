@@ -26,24 +26,6 @@ public:
             }
         }
         
-//         int ca = 0,cb = 0;
-//         for(auto z:a){
-//             if(z == '0'){
-//                 ca++;
-//             }
-//         }
-        
-//         for(auto z:b){
-//             if(z == '0'){
-//                 cb++;
-//             }
-//         }
-        
-//         if(ca == m || cb == n){
-//             cout << "YES ||";
-//             return "0";
-//         }
-        
         if(m == 1){
             if(a[0] == '0'){
                 return "0";
@@ -107,16 +89,6 @@ public:
             i--;
         }
         
-//         for(auto k:str){
-//             cout << k << " ";
-//         }
-//         cout << "\n";
-        
-//         for(auto k:strlen){
-//             cout << k << " ";
-//         }
-//         cout << "\n";
-        
         string answer;
         i = 0;
         int totalstr = strlen.size();
@@ -151,7 +123,6 @@ public:
                 add = 0;
             }
         }
-        // cout << answer << " " << remainder << "\n";
         
         if(remainder != 0){
             while(remainder != 0){
@@ -159,7 +130,6 @@ public:
                 remainder /= 10;
             }
         }
-        // cout << answer << "\n";
         
         reverse(answer.begin(),answer.end());
         return answer;
