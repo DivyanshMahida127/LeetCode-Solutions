@@ -17,7 +17,6 @@ public:
                 j++;
                 k--;
             }
-            
             if(maybe == true){
                 return check;
             }
