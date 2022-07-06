@@ -1,7 +1,7 @@
 class Solution {
 public:
     string firstPalindrome(vector<string>& words) {
-        string answer,check;
+        string check;
         int i,j,k;
         bool maybe = true;
         for(i=0;i<words.size();i++){
@@ -18,10 +18,9 @@ public:
             }
             
             if(maybe == true){
-                answer = check;
-                return answer;
+                return check;
             }
         }
-        return answer;
+        return "";
     }
 };
