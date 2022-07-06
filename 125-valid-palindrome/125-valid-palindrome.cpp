@@ -20,16 +20,11 @@ public:
             }
         }
         
-        // cout << check << "\n";
-        int m = check.length();
-        // cout << m << "\n";
-        
-        
+        int m = check.length(); 
         
         bool answer = true;
         i=0;j=m-1;
         while(i < j){
-            // cout << i << " " << j << "\n";
             if(check[i] != check[j]){
                 answer = false;
                 break;
