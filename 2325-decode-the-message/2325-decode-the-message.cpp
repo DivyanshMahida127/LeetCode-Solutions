@@ -21,11 +21,6 @@ public:
             }
         }
         
-        // for(auto i:a){
-        //     cout << i << " ";
-        // }
-        // cout << "\n";
-        
         string answer;
         string c;
         for(i=0;i<n;i++){
@@ -34,9 +29,7 @@ public:
             }
             else{
                 b = message[i]-97;
-                // cout << b << "\n";
                 c = a[b];
-                // cout << c << "\n";
                 answer += c;
             }
         }
