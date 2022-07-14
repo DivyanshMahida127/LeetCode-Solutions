@@ -26,7 +26,6 @@ public:
             while(income >= 0){
                 a = brackets[i][0] - brackets[i-1][0];
                 b = brackets[i][1];
-                // cout << i << " " << a << " " << income << " " << answer << "\n";
                 if(a < income){
                     answer += ((a*b)/c);
                     income -= a;
