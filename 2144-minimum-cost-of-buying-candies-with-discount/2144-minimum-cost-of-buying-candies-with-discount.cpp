@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minimumCost(vector<int>& cost) {
-        int i,j,n;
+        int i,n;
         n = cost.size();
         int answer = 0;
         if(n == 1){
