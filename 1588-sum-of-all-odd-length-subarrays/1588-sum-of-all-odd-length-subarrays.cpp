@@ -22,7 +22,6 @@ public:
         }
         
         for(i=3;i<=n;i+=2){
-            // cout << i  << "\n";
             add = 0;
             j=0;
             while(j < i){
@@ -31,7 +30,6 @@ public:
             }
             
             answer += add;
-            // cout << add << "\n";
             
             j=0,k = i;
             while(k < n){
@@ -39,7 +37,6 @@ public:
                 add += arr[k];
                 j++;
                 k++;
-                // cout << add << "\n";
                 answer += add;
             }
         }
