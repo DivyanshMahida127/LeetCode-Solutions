@@ -5,9 +5,8 @@ public:
             return num;
         }
         vector<int> odd,even;
-        int i,j,remainder,m,count;
+        int i,j,remainder,m;
         m = num;
-        count = 0;
         while(m != 0){
             remainder = m%10;
             if(remainder%2 == 0){
@@ -16,7 +15,6 @@ public:
             else{
                 odd.push_back(remainder);
             }
-            count++;
             m /= 10;
         }
         
@@ -42,7 +40,8 @@ public:
         
         reverse(result.begin(),result.end());
         int answer = 0;
-        for(i=0;i<result.size();i++){
+        m = result.size();
+        for(i=0;i<m;i++){
             answer = answer*10+result[i];
         }
         return answer;
