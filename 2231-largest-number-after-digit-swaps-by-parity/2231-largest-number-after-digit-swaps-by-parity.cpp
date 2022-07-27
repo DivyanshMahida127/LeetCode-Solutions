@@ -40,14 +40,10 @@ public:
             m/=10;
         }
         
-        // for(auto i:result){
-        //     cout << i << "\n";
-        // }
         reverse(result.begin(),result.end());
         int answer = 0;
         for(i=0;i<result.size();i++){
             answer = answer*10+result[i];
-            // cout << answer << "\n";
         }
         return answer;
     }
