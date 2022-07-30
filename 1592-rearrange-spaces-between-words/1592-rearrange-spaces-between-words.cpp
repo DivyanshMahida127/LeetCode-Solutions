@@ -75,7 +75,6 @@ public:
         
         for(i=l;i<n;i++){
             if(text[i] == ' '){
-                // letter = false;
                 
                 int k = 0;
                 while(k != space){
@@ -92,7 +91,6 @@ public:
             }
             else{
                 j++;
-                // letter = true;
                 answer += text[i];
             }
             if(j == totalletter){
