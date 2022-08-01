@@ -1,25 +1,25 @@
 class Solution {
 public:
     vector<string> fizzBuzz(int n) {
-        int i,j;
-        vector<string> answer(n);
-        string a,b,c,d;
+        vector<string> answer;
+        string a,b,c;
+        int d;
         a = "FizzBuzz";
         b = "Fizz";
         c = "Buzz";
-        for(i=0;i<n;i++){
+        for(int i=0;i<n;i++){
             if((((i+1)%3) == 0) && (((i+1)%5) == 0)){
-                answer[i] = a;
+                answer.push_back(a);
             }
             else if(((i+1)%3) == 0){
-                answer[i] = b;
+                answer.push_back(b);
             }
             else if(((i+1)%5) == 0){
-                answer[i] = c;
+                answer.push_back(c);
             }
             else{
-                int d = i+1;
-                answer[i] = to_string(d);
+                d = i+1;
+                answer.push_back(to_string(d));
             }
         }
         return answer;
