@@ -2,7 +2,8 @@ class Solution {
 public:
     vector<int> arrayChange(vector<int>& nums, vector<vector<int>>& operations) {
         int m = operations.size(),n = nums.size(),i,j,k;
-        vector<int> index(1000001,0);
+        
+        map<int,int> index;
         
         for(i=0;i<n;i++){
             index[nums[i]] = i;
