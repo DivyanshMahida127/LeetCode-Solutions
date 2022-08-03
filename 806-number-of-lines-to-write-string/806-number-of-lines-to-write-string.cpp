@@ -8,11 +8,9 @@ public:
         for(i=0;i<n;i++){
             j = s[i]-97;
             if((value + widths[j]) <= 100){
-                // cout << level << " " << value << "\n";
                 value +=  widths[j];
             }
             else{
-                // cout << level << " " << value << "\n";
                 level++;
                 value = widths[j];
             }
