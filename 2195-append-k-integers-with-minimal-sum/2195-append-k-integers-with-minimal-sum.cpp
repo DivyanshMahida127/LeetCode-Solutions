@@ -9,7 +9,6 @@ public:
             if(nums[0] == 1){
                 c = (remaining+2)*(remaining+1);
                 c /= 2;
-                
                 answer = (c-1);
                 return answer;
             }
@@ -18,13 +17,11 @@ public:
                 if(c == remaining){
                     answer = c*(c+1);
                     answer /= 2;
-                    // cout << "For c equals remaining" << "\n";
                     return answer;
                 }
                 else if(c > remaining){
                     answer = remaining*(remaining+1);
                     answer /= 2;
-                    // cout << "c greater than remaining" << "\n";
                     return answer;
                 }
                 else{
@@ -39,7 +36,6 @@ public:
                     c = c*(c+1);
                     c /= 2;
                     answer += (c-b);
-                    // cout << "c less than remaining" << "\n";
                     return answer;
                 }
             }
@@ -92,7 +88,6 @@ public:
                     
                     answer += (b - c - nums[i]);
                     remaining -= a;
-                    // cout << remaining << " " << answer << "\n";
                 }
                 else{
                     b = nums[j];
@@ -106,7 +101,6 @@ public:
                     
                     answer += (c - b);
                     remaining = 0;
-                    // cout << remaining << " " << answer << "\n";
                 }
                 
                 if(remaining <= 0){
