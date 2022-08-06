@@ -46,15 +46,6 @@ public:
             }
         }
         
-        // int count = 0;
-        // for(auto i:sum){
-        //     cout << i << " ";
-        //     count++;
-        //     if(count == 100){
-        //         break;
-        //     }
-        // }
-        // cout << "\n";
         i=0;
         j=sum.size()-1;
         int answer = binarysearch(i,j,sum,n);
