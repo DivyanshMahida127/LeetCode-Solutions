@@ -40,11 +40,6 @@ public:
             }
         }
         
-        for(i=0;i<n;i++){
-            cout << nums[i] << " ";
-        }
-        cout << "\n";
-        
         vector<int> answer;
         for(i=0;i<n;i++){
             if(nums[i] == 0){
