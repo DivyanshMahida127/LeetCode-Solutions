@@ -14,8 +14,6 @@ public:
         answer = "1";
         m = answer.size();
         for(i=2;i<=n;i++){
-            // cout << "i " << i << "\n";
-            // cout << "answer" << answer << "\n";
             j=0;
             result = "";
             while(j < m){
@@ -28,9 +26,7 @@ public:
                         j++;
                     }
                     else{
-                        // cout << count << " " << answer[k-1] << "\n";
                         string add = to_string(count) + answer[k-1];
-                        // cout << add << "\n";
                         result += add;
                         j = k-1;
                         count = 0;
@@ -40,10 +36,7 @@ public:
                 j++;
                 
                 if(count != 0){
-                    // cout << "Second Loop" << "\n";
-                    // cout << count << " " << answer[k-1] << "\n";
                     string add = to_string(count) + answer[k-1];
-                    // cout << add << "\n";
                     result += add;
                 }
             }
