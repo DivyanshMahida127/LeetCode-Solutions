@@ -37,7 +37,6 @@ public:
                     a += b;
                 }
             }
-            // cout << a << "\n";
             if(done == false){
                 if(m == 0){
                     b = "0";
@@ -55,7 +54,6 @@ public:
                 reverse(b.begin(),b.end());
                 a += b;
             }
-            // cout << a << "\n";
             s = a;
             n = s.length();
         }
