@@ -16,24 +16,26 @@ public:
         }
         int i,j,k,m;
         long long tobeadded = 0;
-        vector<long long> task(n,0);
-        for(i=0;i<n;i++){
-            task[i] = tasks[i];
-        }
+        long long tillnow = 0;
+        // vector<long long> task(n,0);
+        // for(i=0;i<n;i++){
+        //     task[i] = tasks[i];
+        // }
         
         map<int,int> a;
+        map<int,long long> b;
         long long answer = 0;
         for(i=0;i<n;i++){
             
             tobeadded = 0;
-            if(a.find(task[i]) == a.end()){
-                a[task[i]] = i;
+            if(a.find(tasks[i]) == a.end()){
+                a[tasks[i]] = i;
                 tobeadded = 0;
             }
             else{
-                j = a[task[i]];
+                j = a[tasks[i]];
                 k = i-1;
-                m = task[k]-task[j];
+                m = tillnow-b[tasks[i]];
                 m += (k-j);
                 if(m >= space){
                     tobeadded = 0;
@@ -41,19 +43,14 @@ public:
                 else{
                     tobeadded = space-m;
                 }
-                a[task[i]] = i;
+                a[tasks[i]] = i;
             }
             
-            if(i != 0){
-                task[i] = task[i-1] + tobeadded;
-            }
-            else{
-                task[i] = 0;
-            }
-            
+            tillnow += tobeadded;
+            b[tasks[i]] = tillnow;
             
         }
-        answer = task[n-1] + n;
+        answer = tillnow + n;
         return answer;
     }
 };
