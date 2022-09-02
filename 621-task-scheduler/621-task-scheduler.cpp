@@ -10,17 +10,7 @@ public:
             a[j]++;
         }
         
-        // for(auto i:a){
-        //     cout << i << " ";
-        // }
-        // cout << "\n";
-        
         sort(a.begin(),a.end(),greater<int>());
-        
-        // for(auto i:a){
-        //     cout << i << " ";
-        // }
-        // cout << "\n";
         
         j=0;
         int answer = 0;
