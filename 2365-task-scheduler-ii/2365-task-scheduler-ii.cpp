@@ -17,10 +17,6 @@ public:
         int i,j,k,m;
         long long tobeadded = 0;
         long long tillnow = 0;
-        // vector<long long> task(n,0);
-        // for(i=0;i<n;i++){
-        //     task[i] = tasks[i];
-        // }
         
         map<int,int> a;
         map<int,long long> b;
