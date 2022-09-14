@@ -11,11 +11,6 @@ public:
             }
         }
         
-        // for(auto i:a){
-        //     cout << i << " ";
-        // }
-        // cout << "\n";
-        
         for(i=0;i<9;i++){
             if(a[i] == -1){
                 break;
@@ -32,14 +27,11 @@ public:
                         break;
                     }
                 }
-                // cout << j << " " << k << "\n";
                 j++;
                 for(l=j;l<k;l++){
                     answer += s[l];
                 }
             }
-            
-            // cout << answer << "\n";
         }
         return answer;
     }
