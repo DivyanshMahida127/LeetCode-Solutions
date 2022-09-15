@@ -18,9 +18,8 @@ public:
             for(j=0;j<n;j++){
                 b += (t[j]-97);
             }
-            // cout << a << " " << b << "\n";
+            
             int c = b-a;
-            // cout << c << "\n";
             answer = c+97;
         }
         return answer;
