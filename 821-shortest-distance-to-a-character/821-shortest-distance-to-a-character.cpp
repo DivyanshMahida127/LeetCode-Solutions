@@ -35,11 +35,6 @@ public:
             i++;
         }
         
-        // for(auto i:answer){
-        //     cout << i << " ";
-        // }
-        // cout << "\n";
-        
         j = -1;
         i = n-1;
         while(i >= 0){
@@ -59,11 +54,6 @@ public:
             }
             i--;
         }
-        
-        // for(auto i:answer){
-        //     cout << i << " ";
-        // }
-        // cout << "\n";
         return answer;
     }
 };
