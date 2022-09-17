@@ -6,7 +6,6 @@ public:
             if(grid[i][j] == 1){
                 result++;
                 grid[i][j] = -1;
-                // cout << "ij: " << i << " " << j << "\n";
                 count(grid,i,j,result,m,n);
             }
         }
@@ -17,7 +16,6 @@ public:
             if(grid[i][j] == 1){
                 result++;
                 grid[i][j] = -1;
-                // cout << "ij: " << i << " " << j << "\n";
                 count(grid,i,j,result,m,n);
             }
         }
@@ -28,7 +26,6 @@ public:
             if(grid[i][j] == 1){
                 result++;
                 grid[i][j] = -1;
-                // cout << "ij: " << i << " " << j << "\n";
                 count(grid,i,j,result,m,n);
             }
         }
@@ -39,7 +36,6 @@ public:
             if(grid[i][j] == 1){
                 result++;
                 grid[i][j] = -1;
-                // cout << "ij: " << i << " " << j << "\n";
                 count(grid,i,j,result,m,n);
             }   
         }
@@ -58,10 +54,8 @@ public:
             for(j=0;j<n;j++){
                 if(grid[i][j] == 1){
                     grid[i][j] = -1;
-                    // cout << "ij: " << i << " " << j << "\n";
                     result = 1;
                     count(grid,i,j,result,m,n);
-                    // cout << "result " << result << "\n";
                     answer = max(result,answer);
                 }
             }
