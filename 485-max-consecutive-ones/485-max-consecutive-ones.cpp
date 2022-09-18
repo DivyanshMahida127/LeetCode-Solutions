@@ -9,12 +9,13 @@ public:
         for(i=0;i<n;i++){
             if(nums[i] == 1){
                 count++;
-                result = max(result,count);
             }
             else{
+                result = max(result,count);
                 count = 0;
             }
         }
+        result = max(result,count);
         return result;
     }
 };
