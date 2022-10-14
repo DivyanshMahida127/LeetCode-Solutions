@@ -33,7 +33,6 @@ public:
                 ListNode *b = a->next;
                 temp->next=b;
                 break;
-                free(a);
             }
             temp = temp -> next;
         }
