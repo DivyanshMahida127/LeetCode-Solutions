@@ -69,16 +69,6 @@ public:
             a = a->next;
         }
         
-//         for(auto i:memory){
-//             cout << i << " ";
-//         }
-//         cout << "\n";
-        
-//         for(auto i:index){
-//             cout << i << " ";
-//         }
-        
-        
         return h;
     }
 };
