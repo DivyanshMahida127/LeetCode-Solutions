@@ -9,7 +9,7 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        int n = 10005;
+        int n = 10002;
         if(head == NULL){
             return false;
         }
