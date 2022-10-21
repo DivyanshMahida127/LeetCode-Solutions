@@ -10,41 +10,36 @@
  */
 class Solution {
 public:
-    ListNode *hd = NULL;
-    ListNode *tail = NULL;
-    
-    // Insert New Node into the new linked list
-    void insert(int i){
-        // If the list is empty
-        if(tail == NULL){
-            ListNode *temp = new ListNode(i);
-            tail = temp;
-            hd = tail;
-        }
-        else{
-            ListNode *temp = new ListNode(i);
-            tail -> next = temp;
-            tail = temp;
-        }
-    }
     
     ListNode* mergeNodes(ListNode* head) {
-        ListNode *temp = head;
-        int i=0,j;
+        ListNode *temp = head, *previous = head;
+        int i=0,j,k=0;
         while(temp != NULL){
             j = temp->val;
             i += j;
             
             if((temp->next) != NULL){
-                // If value of next node is zero
                 if( ((temp->next)->val) == 0){
-                    insert(i);
+                    previous->val = i;
+                    previous = previous->next;
                     i = 0;
+                    k++;
                 }
             }
             temp = temp->next;
         }
+        cout << k;
+        i=0;
+        temp = head;
+        while(temp != NULL){
+            i++;
+            if(i==k){
+                temp->next = NULL;
+                break;
+            }
+            temp = temp-> next;
+        }
         
-        return hd;
+        return head;
     }
 };
