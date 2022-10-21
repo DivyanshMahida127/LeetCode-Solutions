@@ -41,12 +41,6 @@ public:
             temp = temp->next;
         }
         
-        // tail = hd;
-        // while(hd!=NULL){
-        //     cout << hd->val << " ";
-        //     hd = hd-> next;
-        // }
-        
         return hd;
     }
 };
