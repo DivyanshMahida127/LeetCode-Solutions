@@ -62,9 +62,8 @@ public:
             temp = temp->next;
         }
         
-    
-        // if value of k is 1
         if(pf == NULL){
+            // if value of k is 1
             pf = pb->next;
             pb->next = head;
             pf->next = head->next;
@@ -80,6 +79,8 @@ public:
                 pb->next = temp;
                 return head;
             }
+            
+            // if both node are not next to each other
             temp = pf->next->next;
             pf->next->next = pb->next->next;
             pb->next->next = temp;
