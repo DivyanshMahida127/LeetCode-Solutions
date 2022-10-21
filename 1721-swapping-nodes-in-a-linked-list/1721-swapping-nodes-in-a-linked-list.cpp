@@ -12,12 +12,15 @@ class Solution {
 public:
     ListNode* swapNodes(ListNode* head, int k) {
         
+        // Finding total size of Linked-list
         int n = 0;
         ListNode *temp = head;
         while(temp != NULL){
             n++;
             temp = temp->next;
         }
+        
+        // If kth node from ending equals kth node from begining.
         int m;
         if((n%2) == 1){
             m = n/2;
@@ -32,11 +35,14 @@ public:
             m++;
         }
         
+        // If value of k is greater than half size of array.
         if(k > m){
             k = n - k;
             k++;
         }
         
+        
+        // pb and pf pointing to the node previous of kth nodes.
         int i,j;
         i=1,j=n;
         ListNode *pf = NULL;
@@ -56,6 +62,8 @@ public:
             temp = temp->next;
         }
         
+    
+        // if value of k is 1
         if(pf == NULL){
             pf = pb->next;
             pb->next = head;
@@ -65,6 +73,7 @@ public:
         }
         else{
             if((pf->next) == pb){
+                // if kth nodes are next to each other.
                 temp = pb->next->next;
                 pf->next = pb->next;
                 pb->next->next = pb;
