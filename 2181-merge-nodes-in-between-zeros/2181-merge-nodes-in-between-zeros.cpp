@@ -13,7 +13,9 @@ public:
     ListNode *hd = NULL;
     ListNode *tail = NULL;
     
+    // Insert New Node into the new linked list
     void insert(int i){
+        // If the list is empty
         if(tail == NULL){
             ListNode *temp = new ListNode(i);
             tail = temp;
@@ -32,7 +34,9 @@ public:
         while(temp != NULL){
             j = temp->val;
             i += j;
+            
             if((temp->next) != NULL){
+                // If value of next node is zero
                 if( ((temp->next)->val) == 0){
                     insert(i);
                     i = 0;
