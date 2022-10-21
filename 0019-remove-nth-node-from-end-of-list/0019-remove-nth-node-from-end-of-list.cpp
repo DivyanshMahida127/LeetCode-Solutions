@@ -18,7 +18,6 @@ public:
             temp = temp->next;
         }
         n = m-n+1;
-        
         temp = head;
         int j=0;
         ListNode *previous = NULL;
@@ -26,10 +25,15 @@ public:
             j++;
             if(j == n){
                 if(previous != NULL){
-                    previous->next = temp -> next;
+                    previous->next = previous->next->next;
+                    delete temp;
+                    return head;
                 }
                 else{
-                    return temp->next;
+                    previous = head;
+                    head = head->next;
+                    delete previous;
+                    return head;
                 }
             }
             previous = temp;
