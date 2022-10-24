@@ -34,22 +34,54 @@ public:
             int till;
             till = n/2;
             
-            int i;
-            string ans;
-            temp = head;
-            while(temp != NULL){
-                i = temp->val;
-                ans += to_string(i);
-                temp=temp->next;
+            int i = 0;
+            temp = NULL;
+            
+            ListNode *next = NULL,*prev = NULL;
+            while(i < till){
+                i++;
+                if(prev == NULL){
+                    prev = head;
+                    next = prev -> next;
+                    temp = next;
+                    prev->next = NULL;
+                }
+                else{
+                    next = next->next;
+                    temp->next = prev;
+                    prev = temp;
+                    temp = next;
+                }
             }
-            string result = ans;
-            reverse(ans.begin(),ans.end());
-            if(ans == result){
-                return true;
+            
+            prev = prev;
+            if((n%2) == 1){
+                next = next->next;
             }
-            else{
-                return false;
+            
+            int j;
+            while(next != NULL && prev != NULL){
+                i = next->val;
+                j = prev->val;
+                if(i != j){
+                    return false;
+                }
+                next = next->next;
+                prev = prev->next;
             }
+            
+//             temp = prev;
+//             while(temp != NULL){
+//                 cout << temp->val << " ";
+//                 temp = temp->next;
+//             }
+//             cout << "\n";
+            
+//             temp = next;
+//             while(temp != NULL){
+//                 cout << temp->val << " ";
+//                 temp = temp->next;
+//             }
         }
         return answer;
     }
