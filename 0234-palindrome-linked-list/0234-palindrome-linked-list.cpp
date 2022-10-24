@@ -69,19 +69,6 @@ public:
                 next = next->next;
                 prev = prev->next;
             }
-            
-//             temp = prev;
-//             while(temp != NULL){
-//                 cout << temp->val << " ";
-//                 temp = temp->next;
-//             }
-//             cout << "\n";
-            
-//             temp = next;
-//             while(temp != NULL){
-//                 cout << temp->val << " ";
-//                 temp = temp->next;
-//             }
         }
         return answer;
     }
