@@ -23,43 +23,44 @@ public:
         }
         
         int i,j,k;
-        ListNode *h = head, *t = head;
+        // ListNode *h = head, 
+        ListNode *tail = head;
         i=1;
         temp = head->next;
         while(temp != NULL){
             k = temp->val;
-            if(t == head){
+            if(i == 1){
                 if((head->val) > k){
                     head->next = temp->next;
                     temp->next = head;
                     
-                    h = temp;
+                    // h = temp;
                     head = temp;
-                    t = temp->next;
+                    tail = temp->next;
                     temp = temp->next;
                 }
                 else{
-                    t = temp;
+                    // t = temp;
                 }
             }
             else{
                 // cout << h->val << " " << t->val << " " << temp->val << "\n";
-                ListNode *next = h,*prev = h;
+                ListNode *next = head,*prev = head;
                 j=0;
                 while(j < i){
                     if((next->val) > k){
                         if(next == head){
-                            t->next = temp->next;
+                            tail->next = temp->next;
                             temp->next = head;
                             head = temp;
                             
-                            h = head;
-                            t = t;
+                            // h = head;
+                            // t = t;
                             
                             break;
                         }
                         else{
-                            t->next = temp->next;
+                            tail->next = temp->next;
                             prev->next = temp;
                             temp->next = next;
                             
@@ -78,8 +79,8 @@ public:
                 // }
                 // cout << "\n";
                 
-                if((t -> next) == temp){
-                    t = temp;
+                if((tail -> next) == temp){
+                    tail = temp;
                 }            
             }
             i++;
@@ -87,7 +88,7 @@ public:
                 break;
             }
             
-            temp = t->next;
+            temp = tail->next;
         }
         return head;
     }
