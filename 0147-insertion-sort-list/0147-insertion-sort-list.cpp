@@ -23,7 +23,6 @@ public:
         }
         
         int i,j,k;
-        // ListNode *h = head, 
         ListNode *tail = head;
         i=1;
         temp = head->next;
@@ -34,7 +33,6 @@ public:
                     head->next = temp->next;
                     temp->next = head;
                     
-                    // h = temp;
                     head = temp;
                     tail = temp->next;
                     temp = temp->next;
