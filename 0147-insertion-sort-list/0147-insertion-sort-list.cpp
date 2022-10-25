@@ -37,6 +37,9 @@ public:
                     tail = temp->next;
                     temp = temp->next;
                 }
+                else{
+                    tail = temp;
+                }
             }
             else{
                 ListNode *next = head,*prev = head;
