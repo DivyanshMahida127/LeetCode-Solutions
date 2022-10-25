@@ -37,12 +37,8 @@ public:
                     tail = temp->next;
                     temp = temp->next;
                 }
-                else{
-                    // t = temp;
-                }
             }
             else{
-                // cout << h->val << " " << t->val << " " << temp->val << "\n";
                 ListNode *next = head,*prev = head;
                 j=0;
                 while(j < i){
@@ -51,9 +47,6 @@ public:
                             tail->next = temp->next;
                             temp->next = head;
                             head = temp;
-                            
-                            // h = head;
-                            // t = t;
                             
                             break;
                         }
@@ -69,13 +62,6 @@ public:
                     prev = next;
                     next = next->next;
                 }
-                
-                // ListNode *print = head;
-                // while(print != NULL){
-                //     cout << print->val << " ";
-                //     print = print->next;
-                // }
-                // cout << "\n";
                 
                 if((tail -> next) == temp){
                     tail = temp;
