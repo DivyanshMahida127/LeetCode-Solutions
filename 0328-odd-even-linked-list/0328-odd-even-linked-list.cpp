@@ -43,30 +43,13 @@ public:
                 odd->next = temp;
                 odd = temp;
                 even->next = NULL;
-                // if(i == n){
-                //     even->next = odd->next;
-                //     even = even->next;
-                //     odd->next = NULL;
-                // }
             }
             else{
                 even->next = temp;
                 even = temp;
                 odd ->next = NULL;
-                // if(i == n){
-                //     odd->next = even->next;
-                //     odd = odd->next;
-                //     even->next = NULL;
-                // }
             }
             temp = temp->next;
-            
-            // if((i%2) == 1){
-            //     odd->next = NULL;
-            // }
-            // else{
-            //     even->next = NULL;
-            // }
         }
         odd->next = add;
         return head;
