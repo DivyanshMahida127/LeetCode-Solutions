@@ -21,11 +21,8 @@ public:
             next->next = temp;
             temp = next;
             next = a;
-        }
-        
+        }      
         l1 = temp;
-        
-        // return temp;
         
         temp = l2;
         next = l2->next;
@@ -35,8 +32,7 @@ public:
             next->next = temp;
             temp = next;
             next = a;
-        }
-        
+        }     
         l2 = temp;
         
         ListNode *t1 = l1,*t2 = l2;
