@@ -44,7 +44,6 @@ public:
         
         prev->next = list2;
         tail->next = next;
-        // cout << prev->val << " " << next->val << "\n";
         return list1;
     }
 };
